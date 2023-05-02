@@ -62,6 +62,13 @@ Iniciar el nodo
 ./nym-mixnode init --id  cypherplatxs --host $(curl ifconfig.me) --wallet-address n1ntzug277pnc5pge07d8882t4zfkrlu4am3mn2z
 ~~~
 
+
+~~~
+./nym-mixnode node-details --id cypherplatxs
+~~~
+
+
+
 Debes de obteneter el Ident Key y el  Sphinx Key para ponerlos en la wallet y hacer el bonding
 
 ~~~
@@ -80,24 +87,76 @@ Hacer el bonding desde la wallet
 ![doc-mixnode](https://user-images.githubusercontent.com/17709296/235567658-975dacd4-738b-42fe-9f5d-d238985e72c4.png)
 
 ~~~
-./nym-mixnode node-details --id cypherplatxs
+./nym-mixnode run --id cypherplatxs
 ~~~
 
-Habilitar los puertos 1789, 1790 8000, 22, 80, 443
+
+### Configura tu firewall
+
+Los siguientes comandos le permitirán configurar un firewall usando ufw.
 
 ~~~
-sudo ufw allow 1789,1790,8000,22,80,443/tcp
-# check the status of the firewall
+# revisa si tienes instalado  ufw 
+ufw version
+# si no está instalado, instalalo con
+sudo apt install ufw -y
+# habilita ufw
+sudo ufw enable
+# revisa el status del firewall
 sudo ufw status
 ~~~
 
 
 
+Habilitar los puertos 1789, 1790 8000, 22, 80, 443
+
+~~~
+sudo ufw allow 1789,1790,8000,22,80,443/tcp
+# revisa el status del firewall
+sudo ufw status
+~~~
 
 
-## servicios de vps
+### Automatizar su nodo de mezcla con systemd
 
-https://www.hostinger.co/vps-servidor-web
+Es útil que el nodo de mezcla se inicie automáticamente en el momento del arranque del sistema. Aquí hay un archivo de servicio systemd para hacer eso:
 
+~~~
+
+cd /etc/systemd/system/
+
+sudo nano nym-mixnode.service
+~~~
+
+pega el sigueinte codigo dentrio de este archivo 
+
+~~~
+[Unit]
+Description=Nym Mixnode (v1.1.17)
+StartLimitInterval=350
+StartLimitBurst=10
+
+[Service]
+User=nym
+LimitNOFILE=65536
+ExecStart=/home/nym/nym-mixnode run --id cypherplatxs
+KillSignal=SIGINT
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
+~~~
+
+
+en nano guarda con ctrl + o y cierra con ctrl x, y luego habilita el servicio con ↓↓
+
+~~~
+systemctl enable nym-mixnode.service
+~~~
+
+~~~
+service nym-mixnode start
+~~~
 
 
