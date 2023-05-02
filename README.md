@@ -71,11 +71,13 @@ Host: 65.108.110.214 (bind address: 65.108.110.214)
 Version: 1.1.17
 Mix Port: 1789, Verloc port: 1790, Http Port: 8000
 
+
 You are bonding to wallet address: n1eufxdlgt0puwrwptgjfqne8pj4nhy2u5ft62uq
 ~~~
 
 Hacer el bonding desde la wallet 
 
+![doc-mixnode](https://user-images.githubusercontent.com/17709296/235567658-975dacd4-738b-42fe-9f5d-d238985e72c4.png)
 
 ~~~
 ./nym-mixnode node-details --id cypherplatxs
