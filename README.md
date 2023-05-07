@@ -60,6 +60,9 @@ damos permisos de ejecución al binario
 chmod u+x nym-mixnode
 ~~~
 
+🍔 Problemas 
+
+Al intentar ejecutar el binario obtuve este error 
 
 
 *  error al ejecutar el binario de mix-node
@@ -113,6 +116,20 @@ Hacer el bonding desde la wallet
 ./nym-mixnode run --id cypherplatxs
 ~~~
 
+Ahora te pedira una firma 
+
+![firma](https://nymtech.net/docs/images/wallet-sign.png)
+~~~
+./nym-mixnode sign --id cypherplatxs --contract-msg 5XrvVEMzRJk2AcT2h1o6ErZNb8z1ZzD3h7teipBW3NUtrtYq7vu4DRMgzZRTPVPnyr2YWCxpmKCMFaEXvksnJ
+4jt7np3NMLxsLMrFjEBhh67Crtjy4868vCzAivUqzdc365RiqxQQKtv4r9eTk9mTbE9JY8U3TxzKJCSGcBqbrb9JX3HrZVWm6tqbUYbsnku9pqnfeyeUiaYKY44Lm72TYrkZfRrMAZLMATiXT1ntmiKqT37HzRxNZjiH8qHeQEoRHkgDsmXDXRbfppGTpPrN7R4sjynJzehzUBZ8Ug7ovT9FoAHb8kuVQhUiMs1js6tdwtthzQMbPi9vwxUtVvjYknN2fnJgMnckEhzJJpJDCNdH7YhpPaWQnGVVS334mskiuqkbRVrFPJN2nnwArHr3L2cLxSMk9toKfw7ViKJ2p5E5JxiSmKY1cFGZ7uRLsuQ833PJN9JE8crPtkBNefqkbFNz68S5jPmzUShSvAc4TqXKeovDASFmmhKaPqLUrfsSWm7nzuKnzJSMADF6xSuwr9cknMoirqkRkLe7ybJ2ERwSdf5cUxMjF7yjS8tW9hZudnTUb1uPNDuSmPPVrCR12XZyFzBvVgxH51ZNJTym46nqnfA881LQcmFMnCwJf39rVJ4ASLnzEzmuwXj75QoB9ce9kiLmoBNLYe4QKSB6gDd858VnBtBNQELVuCCZbrTYuSCeNdUFhvMwD4kryc1pBYUa8Ro81F3QVfiKN
+~~~
+Copie la firma resultante:
+
+~~~
+>>> The base58-encoded signature is:
+2GbKcZVKFdpi3sR9xoJWzwPuGdj3bvd7yDtDYVoKfbTWdpjqAeU8KS5bSftD5giVLJC3gZiCg2kmEjNG5jkdjKUt
+~~~
+![firma](https://nymtech.net/docs/images/wallet-sign.png)
 
 ### Configura tu firewall
 
