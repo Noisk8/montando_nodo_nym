@@ -146,6 +146,8 @@ Ahora ejecuta el nodo
 
 pon una descripción al nodo 
 
+Acá te va pedir un nombre, una descripción y un dominio el dominio puede ser el contacto con el cual las personas que hagan stake tengan contacto directo 
+
 ~~~
 ./nym-mixnode describe --id winston-smithnode
 ~~~
