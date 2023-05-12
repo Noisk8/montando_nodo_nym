@@ -40,16 +40,19 @@ sudo scp mix-node root@200.58.105.37:/root
 Entrar al root del vps vía ssh 
 
 ~~~
-ssh root@200.58.105.37
+ssh root@xxx.xxx.xxx.xx
 ~~~
 
-actualisamos el sistema 
+las xxx se cambia por  la ip del vps que has contratado
+
+
+actualisamos el sistema con el comando 
 
 ~~~
 sudo apt update
 ~~~
 
-Una vez adentro del vps listamos para revisar que si este el  binario de nym-node
+Una vez adentro del vps listamos para revisar que si este el  binario de nym-mixnode
 
 ~~~
 ls -la
@@ -87,7 +90,7 @@ sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.17_amd64.deb
 Iniciar el nodo 
 
 ~~~
-./nym-mixnode init --id  cypherplatxs --host $(curl ifconfig.me) --wallet-address n1ntzug277pnc5pge07d8882t4zfkrlu4am3mn2z
+./nym-mixnode init --id  cypherplatxs --host $(curl ifconfig.me) --wallet-address n1ntzugxxxxxxxxxxxt4zfkrlu4am3mn2z
 ~~~
 
 
@@ -189,7 +192,7 @@ pega el sigueinte codigo dentro de este archivo
 
 ~~~
 [Unit]
-Description=Nym Mixnode (v1.1.17)
+Description=Nym Mixnode (v1.1.19)
 StartLimitInterval=350
 StartLimitBurst=10
 
@@ -227,8 +230,6 @@ Descarga la nueva versión del mix node
 Ingresamos al vps vía ssh 
 
 
-
-
 Paramos el proceso del nodo 
 
 ~~~
@@ -239,12 +240,27 @@ service nym-mixnode stop
 Copiamos el bibnario del mixnode al vps
 
 ~~~
-sudo scp mix-node root@200.58.105.37/root
+sudo scp nym-mixnode root@xxx.xx.xxx.xx:/root
 ~~~
 
+
+luego le das los permisos de ejecución al binario 
+
+~~~
+chmod +x nym-mixnode
+~~~
+
+ ~~~
+ ./nym-mixnode init --id  cypherplatxs --host $(curl ifconfig.me) --wallet-address n1ntzugxxxxxxxxxxxt4zfkrlu4am3mn2z
+ ~~~
 En la wallet vamos a la configuración del nodo y cambiamos la versión del nodo por la que acabamos de actualizar 
 
 
+cambiar el numero de la versión en el script et system 
+
+~~~
+systemctl daemon-reload
+~~~
 
 Reiniciamos el servicio 
 
