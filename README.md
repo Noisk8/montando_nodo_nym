@@ -23,6 +23,8 @@ RAM: los requisitos de memoria son muy bajos; por lo general, un nodo de mezcla 
 Discos: los nodos mixtos no requieren espacio en disco más allá de unos pocos bytes para los archivos de configuración.
 
 
+Sistema operativo Linux  Ubuntu  o debian preferiblemente 
+
 
 ### Descargar el binario 
 
@@ -32,7 +34,7 @@ Ve a [Nym Components](https://nymtech.net/download-nym-components/) y descarga e
 mover el binario al vps 
 
 ~~~
-sudo scp mix-node root@200.58.105.37/root
+sudo scp mix-node root@200.58.105.37:/root
 ~~~
 
 Entrar al root del vps vía ssh 
