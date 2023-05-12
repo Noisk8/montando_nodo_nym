@@ -255,8 +255,23 @@ chmod +x nym-mixnode
  ~~~
 En la wallet vamos a la configuración del nodo y cambiamos la versión del nodo por la que acabamos de actualizar 
 
+![Screenshot_20230511_225628](https://github.com/Noisk8/montando_nodo_nym/assets/17709296/d729b7ab-aa13-4a79-9210-27b50291b99d)
+
+
 
 cambiar el numero de la versión en el script et system 
+
+~~~
+cd /etc/systemd/system/
+
+nano nym-mixnode.service
+~~~
+
+ALtera la 2da linea del script y pon la version del nodo que haz actualizado 
+
+~~~
+Description=Nym Mixnode (v1.1.19)
+~~~
 
 ~~~
 systemctl daemon-reload
