@@ -67,7 +67,7 @@ chmod u+x nym-mixnode
 
 🍔 Problemas 
 
-Al intentar ejecutar el binario obtuve este error 
+Al intentar ejecutar varios usuarios hemos experimentado este error...
 
 
 *  error al ejecutar el binario de mix-node
