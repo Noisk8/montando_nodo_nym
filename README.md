@@ -43,7 +43,7 @@ Entrar al root del vps vía ssh
 ssh root@xxx.xxx.xxx.xx
 ~~~
 
-las xxx se cambia por  la ip del vps que has contratado
+las xxx se cambia por la ip del vps que has contratado
 
 
 actualisamos el sistema con el comando 
@@ -269,7 +269,7 @@ cd /etc/systemd/system/
 nano nym-mixnode.service
 ~~~
 
-ALtera la 2da linea del script y pon la version del nodo que haz actualizado 
+Altera la 2da linea del script y pon la version del nodo que haz actualizado 
 
 ~~~
 Description=Nym Mixnode (v1.1.19)
