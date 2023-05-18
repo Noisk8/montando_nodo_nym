@@ -227,6 +227,8 @@ systemctl daemon-reload
 
 ### Actualizar un nodo 
 
+[Vídeo cómo actualzar nodo](https://archive.org/details/nym-node-update)
+
 Descarga la nueva versión del mix node 
 
 Ingresamos al vps vía ssh 
