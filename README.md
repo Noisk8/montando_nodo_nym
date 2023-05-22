@@ -80,9 +80,9 @@ error while loading shared libraries: libssl.so.1.1: cannot open shared object f
 Solución 
 
 ~~~
-wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.17_amd64.deb
+wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.18_amd64.deb
 
-sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.17_amd64.deb
+sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.18_amd64.deb
 ~~~
 
 
