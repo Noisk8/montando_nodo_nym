@@ -233,7 +233,6 @@ Descarga la nueva versión del mix node
 
 Ingresamos al vps vía ssh 
 
-
 Paramos el proceso del nodo 
 
 ~~~
@@ -241,7 +240,7 @@ service nym-mixnode stop
 ~~~
 
 
-Copiamos el bibnario del mixnode al vps
+Copiamos el binario del mixnode al vps
 
 ~~~
 sudo scp nym-mixnode root@xxx.xx.xxx.xx:/root
