@@ -12,6 +12,10 @@ Si aún no tienes uno, crea una dirección Nym utilizando el monedero y fúndalo
 
 NYM se puede comprar a través de Bity desde la propia cartera con BTC o fiat, y actualmente está presente en varios intercambios.
 
+~~~
+Recuerda que sólo puedes utilizar tokens Cosmos NYM para enlazar tu mixnode. No puedes utilizar representaciones ERC20 de NYM para ejecutar un nodo.
+~~~
+
 Un VPS ( Servidor privado virtual )
 Preparación de la billetera
 
