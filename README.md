@@ -6,6 +6,12 @@ Hay un par de pasos que deben completarse antes de comenzar a configurar su nodo
 
 ### preparando tu billetera
 
+Antes de inicializar y ejecutar tu mixnode, visita nuestra página web y descarga el monedero Nym para tu sistema operativo. Si no dispones de los binarios precompilados para tu sistema operativo, puedes crear el monedero tú mismo siguiendo las instrucciones que encontrarás aquí.
+
+Si aún no tienes uno, crea una dirección Nym utilizando el monedero y fúndalo con tokens. La cantidad mínima necesaria para enlazar un mixnode es de 100 NYM, pero asegúrate de tener un poco más para tener en cuenta los costes de gas.
+
+NYM se puede comprar a través de Bity desde la propia cartera con BTC o fiat, y actualmente está presente en varios intercambios.
+
 Un VPS ( Servidor privado virtual )
 Preparación de la billetera
 
