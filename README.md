@@ -253,7 +253,7 @@ service nym-mixnode stop
 Copiamos el binario del mixnode al vps
 
 ~~~
-sudo scp nym-mixnode root@xxx.xx.xxx.xx:/root
+scp nym-mixnode root@xxx.xx.xxx.xx:/root
 ~~~
 
 
@@ -283,7 +283,7 @@ nano nym-mixnode.service
 Altera la 2da linea del script y pon la version del nodo que haz actualizado 
 
 ~~~
-Description=Nym Mixnode (v1.1.19)
+Description=Nym Mixnode (v1.1.21)
 ~~~
 
 ~~~
