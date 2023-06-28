@@ -266,6 +266,12 @@ chmod +x nym-mixnode
  ~~~
  ./nym-mixnode init --id  cypherplatxs --host $(curl ifconfig.me) --wallet-address n1ntzugxxxxxxxxxxxt4zfkrlu4am3mn2z
  ~~~
+
+### despues del binario 1.1.21 el comando --wallet no funca
+ ~~~
+ ./nym-mixnode init --id  cypherplatxs --host $(curl ifconfig.me) 
+ ~~~
+
 En la wallet vamos a la configuración del nodo y cambiamos la versión del nodo por la que acabamos de actualizar 
 
 ![Screenshot_20230511_225628](https://github.com/Noisk8/montando_nodo_nym/assets/17709296/d729b7ab-aa13-4a79-9210-27b50291b99d)
