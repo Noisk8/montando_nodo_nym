@@ -204,7 +204,7 @@ pega el sigueinte codigo dentro de este archivo
 
 ~~~
 [Unit]
-Description=Nym Mixnode (v1.1.19)
+Description=Nym Mixnode (v1.1.26)
 StartLimitInterval=350
 StartLimitBurst=10
 
