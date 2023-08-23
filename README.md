@@ -204,7 +204,7 @@ pega el sigueinte codigo dentro de este archivo
 
 ~~~
 [Unit]
-Description=Nym Mixnode (v1.1.26)
+Description=Nym Mixnode (v1.1.27)
 StartLimitInterval=350
 StartLimitBurst=10
 
@@ -275,10 +275,16 @@ chmod +x nym-mixnode
 
 en los campos de las xx va la ip del nodo 
 
-### despues del binario 1.1.21 el comando --wallet no funca
- ~~~
- ./nym-mixnode init --id  cypherplatxs --host $(curl ifconfig.me) 
- ~~~
+para saber la ip del servidor presional el comando 
+
+~~~
+ifconfig
+~~~
+y al resultado tendras un inet tipo
+~~~
+inet 192.16x.x.xx 
+~~~
+
 
 En la wallet vamos a la configuración del nodo y cambiamos la versión del nodo por la que acabamos de actualizar 
 
