@@ -264,8 +264,10 @@ chmod +x nym-mixnode
 ~~~
 
  ~~~
- ./nym-mixnode init --id  cypherplatxs --host $(curl ifconfig.me) --wallet-address n1ntzugxxxxxxxxxxxt4zfkrlu4am3mn2z
+ ./nym-mixnode init --id  cypherplatxs --host  xxx.xx.xxx.xx 
  ~~~
+
+en los campos de las xx va la ip del nodo 
 
 ### despues del binario 1.1.21 el comando --wallet no funca
  ~~~
