@@ -249,6 +249,12 @@ Paramos el proceso del nodo
 service nym-mixnode stop
 ~~~
 
+Eliminamos el binario de mixnode que vamos a reemplazar 
+
+~~~
+rm nym-mixnode
+~~~
+
 
 Copiamos el binario del mixnode al vps
 
