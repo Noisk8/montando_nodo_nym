@@ -2,6 +2,8 @@
 
 ### Pasos preliminares
 
+Te recomendamos abrir dos terminales para hacer las configuraciones mas agutso, una la usaremos para acceder al servidor vía ssh y la otra terminal la usaremos para enviar el binario del mixnode desde nuestra computadora hasta el servidor donde montaremos el nodo
+
 Hay un par de pasos que deben completarse antes de comenzar a configurar su nodo de mezcla:
 
 ### preparando tu billetera
