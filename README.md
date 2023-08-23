@@ -237,13 +237,20 @@ service nym-mixnode start
 systemctl daemon-reload
 ~~~
 
-### Actualizar un nodo 
+# Actualizar un nodo 
 
 [Vídeo cómo actualzar nodo](https://archive.org/details/nym-node-update)
 
 Descarga la nueva versión del mix node 
 
-Ingresamos al vps vía ssh 
+[Nym Components](https://nymtech.net/download-nym-components/)
+
+En una terminal ingresamos al servidor vía ssh 
+
+~~~
+ssh root@190.120.xxx.xxx
+~~~
+
 
 Paramos el proceso del nodo 
 
@@ -257,19 +264,22 @@ Eliminamos el binario de mixnode que vamos a reemplazar
 rm nym-mixnode
 ~~~
 
+En otra terminal  desde donde tengamos descargada la nueva versión del binario 
 
-Copiamos el binario del mixnode al vps
+Copiamos el binario del mixnode al servidor del nodo 
 
 ~~~
 scp nym-mixnode root@xxx.xx.xxx.xx:/root
 ~~~
 
 
-luego le das los permisos de ejecución al binario 
+luego en la terminal donde accediste al nodo le das los permisos de ejecución al binario 
 
 ~~~
 chmod +x nym-mixnode
 ~~~
+
+Hacemos el comando init para inicializar el nodo de nuevo 
 
  ~~~
  ./nym-mixnode init --id  cypherplatxs --host  xxx.xx.xxx.xx 
