@@ -315,7 +315,7 @@ nano nym-mixnode.service
 Altera la 2da linea del script y pon la version del nodo que haz actualizado 
 
 ~~~
-Description=Nym Mixnode (v1.1.21)
+Description=Nym Mixnode (v1.1.27)
 ~~~
 
 ~~~
@@ -327,5 +327,15 @@ Reiniciamos el servicio
 ~~~
 service nym-mixnode restart
 ~~~
+
+Para verificar que nuestro nodo quedo activo 
+
+primero podemos hacer un ping al server
+
+~~~
+ping xx.xxx.xx.xx
+~~~
+
+y luego ver el explorador de [guru](https://mixnet.explorers.guru/) 
 
 
