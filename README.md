@@ -279,14 +279,6 @@ luego en la terminal donde accediste al nodo le das los permisos de ejecución a
 chmod +x nym-mixnode
 ~~~
 
-Hacemos el comando init para inicializar el nodo de nuevo 
-
- ~~~
- ./nym-mixnode init --id  cypherplatxs --host  xxx.xx.xxx.xx 
- ~~~
-
-en los campos de las xx va la ip del nodo 
-
 para saber la ip del servidor presional el comando 
 
 ~~~
@@ -296,6 +288,14 @@ y al resultado tendras un inet tipo
 ~~~
 inet 192.16x.x.xx 
 ~~~
+
+Hacemos el comando init para inicializar el nodo de nuevo 
+
+ ~~~
+ ./nym-mixnode init --id  cypherplatxs --host  xxx.xx.xxx.xx 
+ ~~~
+
+en los campos de las xx va la ip del nodo 
 
 
 En la wallet vamos a la configuración del nodo y cambiamos la versión del nodo por la que acabamos de actualizar 
