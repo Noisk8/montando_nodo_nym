@@ -339,3 +339,16 @@ ping xx.xxx.xx.xx
 y luego ver el explorador de [guru](https://mixnet.explorers.guru/) 
 
 
+<details>
+<summary> <h1><b> Cambiar la descripción del nodo </b> </h1></summary>
+
+~~~
+cd .nym/mixnodes/cypherplatxs/
+
+cd config/
+
+~~~
+
+
+</details>
+
