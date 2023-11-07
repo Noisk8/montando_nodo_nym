@@ -102,7 +102,7 @@ sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.18_amd64.deb
 Iniciar el nodo 
 
 ~~~
-./nym-mixnode init --id  cypherplatxs --host $(curl ifconfig.me) --wallet-address n1ntzugxxxxxxxxxxxt4zfkrlu4am3mn2z
+./nym-mixnode init --id  cypherplatxs --host 192.168.x.xx
 ~~~
 
 
