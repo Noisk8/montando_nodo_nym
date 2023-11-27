@@ -2,6 +2,12 @@
 
 ### Pasos preliminares
 
+~~~
+Tener ipv6 en tu router para conectarte
+~~~
+
+[Test de ipv6 ](https://ipv6-test.com/)
+
 Te recomendamos abrir dos terminales para hacer las configuraciones mas agutso, una la usaremos para acceder al servidor vía ssh y la otra terminal la usaremos para enviar el binario del mixnode desde nuestra computadora hasta el servidor donde montaremos el nodo
 
 Hay un par de pasos que deben completarse antes de comenzar a configurar su nodo de mezcla:
@@ -22,7 +28,9 @@ Un VPS ( Servidor privado virtual )
 Preparación de la billetera
 
 
-### Especificaciones de hardware de VPS
+### Especificaciones del VPS
+
+Debes de solicitar un acceso a una ip4 primaria para no tener problemas para acceder
 
 Deberá alquilar un VPS para ejecutar su nodo de mezcla. Una razón clave para esto es que tu nodo debe poder enviar datos TCP utilizando IPv4 e IPv6 ( como otros nodos con los que habla pueden usar cualquiera de los protocolos ).
 
@@ -33,6 +41,7 @@ Por ahora, vea las especificaciones a continuación:
 Procesadores: 2 núcleos están bien. Obtenga las CPU más rápidas que pueda pagar.
 RAM: los requisitos de memoria son muy bajos; por lo general, un nodo de mezcla puede usar solo unos pocos cientos de MB de RAM.
 Discos: los nodos mixtos no requieren espacio en disco más allá de unos pocos bytes para los archivos de configuración.
+
 
 
 Sistema operativo Linux  Ubuntu  o debian preferiblemente 
