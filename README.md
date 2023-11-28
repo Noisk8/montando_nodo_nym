@@ -52,17 +52,19 @@ Sistema operativo Linux  Ubuntu  o debian preferiblemente
 Ve a [Nym Components](https://nymtech.net/download-nym-components/) y descarga el binario de nym mix-node
 
 
-mover el binario al vps 
-
-~~~
-sudo scp mix-node root@200.58.105.37:/root
-~~~
-
 Entrar al root del vps vía ssh 
 
 ~~~
 ssh root@xxx.xxx.xxx.xx
 ~~~
+
+descargar el binario en el vps 
+
+~~~
+wget -c https://github.com/nymtech/nym/releases/download/nym-binaries-v2023.4-galaxy/nym-mixnode
+~~~
+
+
 
 las xxx se cambia por la ip del vps que has contratado
 
