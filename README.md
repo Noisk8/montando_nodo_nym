@@ -61,7 +61,7 @@ ssh root@xxx.xxx.xxx.xx
 descargar el binario en el vps 
 
 ~~~
-wget -c https://github.com/nymtech/nym/releases/download/nym-binaries-v2023.4-galaxy/nym-mixnode
+wget -c https://github.com/nymtech/nym/releases/download/nym-binaries-v2023.4-galaxy/nym-mixnode 
 ~~~
 
 
