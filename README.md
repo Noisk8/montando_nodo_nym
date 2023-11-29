@@ -61,7 +61,7 @@ ssh root@xxx.xxx.xxx.xx
 descargar el binario en el vps 
 
 ~~~
-wget -c https://github.com/nymtech/nym/releases/download/nym-binaries-v2023.4-galaxy/nym-mixnode 
+wget -c https://github.com/nymtech/nym/releases/download/nym-binaries-v2023.5-rolo/nym-mixnode
 ~~~
 
 
@@ -275,29 +275,16 @@ Eliminamos el binario de mixnode que vamos a reemplazar
 rm nym-mixnode
 ~~~
 
-En otra terminal  desde donde tengamos descargada la nueva versión del binario 
-
-Copiamos el binario del mixnode al servidor del nodo 
+Descargamos el binario 
 
 ~~~
-scp nym-mixnode root@xxx.xx.xxx.xx:/root
+wget -c https://github.com/nymtech/nym/releases/download/nym-binaries-v2023.5-rolo/nym-mixnode
 ~~~
 
-
-luego en la terminal donde accediste al nodo le das los permisos de ejecución al binario 
+Damos permisos de ejecucución al binario 
 
 ~~~
 chmod +x nym-mixnode
-~~~
-
-para saber la ip del servidor presional el comando 
-
-~~~
-ifconfig
-~~~
-y al resultado tendras un inet tipo
-~~~
-inet 192.16x.x.xx 
 ~~~
 
 Hacemos el comando init para inicializar el nodo de nuevo 
