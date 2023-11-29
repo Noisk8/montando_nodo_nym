@@ -44,19 +44,26 @@ Discos: los nodos mixtos no requieren espacio en disco más allá de unos pocos 
 
 
 
-Sistema operativo Linux  Ubuntu  o debian preferiblemente 
+Sistema operativo Linux  Ubuntu  > 20.04
 
 
-### Descargar el binario 
 
-Ve a [Nym Components](https://nymtech.net/download-nym-components/) y descarga el binario de nym mix-node
+## Paso 1 
 
+Abrir la wallet 
+
+## paso 2 
+
+Para usuarios de windows recmendamos usar wsl, terminal de unix en windows
 
 Entrar al root del vps vía ssh 
 
 ~~~
 ssh root@xxx.xxx.xxx.xx
 ~~~
+
+
+## paso 3 
 
 descargar el binario en el vps 
 
@@ -65,22 +72,7 @@ wget -c https://github.com/nymtech/nym/releases/download/nym-binaries-v2023.5-ro
 ~~~
 
 
-
-las xxx se cambia por la ip del vps que has contratado
-
-
-actualisamos el sistema con el comando 
-
-~~~
-sudo apt update
-~~~
-
-Una vez adentro del vps listamos para revisar que si este el  binario de nym-mixnode
-
-~~~
-ls -la
-~~~
-
+## paso 4 
 
 damos permisos de ejecución al binario 
 
@@ -110,22 +102,61 @@ sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.18_amd64.deb
 
 
 
-Iniciar el nodo 
+## paso 5 
+
+Verificar la version del binario que teenmos 
 
 ~~~
-./nym-mixnode init --id  cypherplatxs --host 192.168.x.xx
+./nym-mixnode --version
+~~~
+
+## paso 6 
+Creamos el archivo de informacion del servicio
+
+~~~
+nano /etc/systemd/system/nym-mixnode.service
+~~~
+
+ponemos dentro esta información
+
+~~~
+[Unit]
+Description=Nym Mixnode (v1.1.34)
+StartLimitInterval=350
+StartLimitBurst=10
+
+[Service]
+User=root
+LimitNOFILE=65536
+ExecStart=/root/nym-mixnode run --id tuID
+KillSignal=SIGINT
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
+
 ~~~
 
 
 
-Para ver los detalles del nodo 
+## paso 7 
+
+Creamos el demonio 
 
 ~~~
-./nym-mixnode node-details --id cypherplatxs
+systemctl daemon-reload
 ~~~
 
 
+## paso 8 
 
+Iniciamos el nodo 
+
+
+~~~
+./nym-mixnode init --id <nombre-nodo> --host <tuip>
+~~~
 Debes de obteneter el Ident Key y el  Sphinx Key para ponerlos en la wallet y hacer el bonding
 
 ~~~
@@ -139,11 +170,14 @@ Mix Port: 1789, Verloc port: 1790, Http Port: 8000
 You are bonding to wallet address: n1eufxdlgt0puwrwptgjfqne8pj4nhy2u5ft62uq
 ~~~
 
+## paso 9 
+
 Hacer el bonding desde la wallet 
 
 ![doc-mixnode](https://user-images.githubusercontent.com/17709296/235567658-975dacd4-738b-42fe-9f5d-d238985e72c4.png)
 
 
+## paso 10 
 
 Ahora te pedira una firma 
 
@@ -151,6 +185,8 @@ Ahora te pedira una firma
 ./nym-mixnode sign --id cypherplatxs --contract-msg 5XrvVEMzRJk2AcT2h1o6ErZNb8z1ZzD3h7teipBW3NUtrtYq7vu4DRMgzZRTPVPnyr2YWCxpmKCMFaEXvksnJ
 4jt7np3NMLxsLMrFjEBhh67Crtjy4868vCzAivUqzdc365RiqxQQKtv4r9eTk9mTbE9JY8U3TxzKJCSGcBqbrb9JX3HrZVWm6tqbUYbsnku9pqnfeyeUiaYKY44Lm72TYrkZfRrMAZLMATiXT1ntmiKqT37HzRxNZjiH8qHeQEoRHkgDsmXDXRbfppGTpPrN7R4sjynJzehzUBZ8Ug7ovT9FoAHb8kuVQhUiMs1js6tdwtthzQMbPi9vwxUtVvjYknN2fnJgMnckEhzJJpJDCNdH7YhpPaWQnGVVS334mskiuqkbRVrFPJN2nnwArHr3L2cLxSMk9toKfw7ViKJ2p5E5JxiSmKY1cFGZ7uRLsuQ833PJN9JE8crPtkBNefqkbFNz68S5jPmzUShSvAc4TqXKeovDASFmmhKaPqLUrfsSWm7nzuKnzJSMADF6xSuwr9cknMoirqkRkLe7ybJ2ERwSdf5cUxMjF7yjS8tW9hZudnTUb1uPNDuSmPPVrCR12XZyFzBvVgxH51ZNJTym46nqnfA881LQcmFMnCwJf39rVJ4ASLnzEzmuwXj75QoB9ce9kiLmoBNLYe4QKSB6gDd858VnBtBNQELVuCCZbrTYuSCeNdUFhvMwD4kryc1pBYUa8Ro81F3QVfiKN
 ~~~
+
+## paso 11
 
 Copie la firma resultante:
 
@@ -161,11 +197,7 @@ Copie la firma resultante:
 ![firma](https://nymtech.net/docs/images/wallet-sign.png)
 
 
-Ahora ejecuta el nodo 
-
-~~~
-./nym-mixnode run --id cypherplatxs
-~~~
+## paso 12 
 
 pon una descripción al nodo 
 
@@ -175,6 +207,8 @@ Acá te va pedir un nombre, una descripción y un dominio el dominio puede ser e
 ./nym-mixnode describe --id winston-smithnode
 ~~~
 
+
+## paso 13 
 
 ### Configura tu firewall
 
@@ -216,21 +250,7 @@ sudo nano nym-mixnode.service
 pega el sigueinte codigo dentro de este archivo 
 
 ~~~
-[Unit]
-Description=Nym Mixnode (v1.1.27)
-StartLimitInterval=350
-StartLimitBurst=10
 
-[Service]
-User=root
-LimitNOFILE=65536
-ExecStart=/root/nym-mixnode run --id cypherplatxs
-KillSignal=SIGINT
-Restart=on-failure
-RestartSec=30
-
-[Install]
-WantedBy=multi-user.target
 ~~~
 
 
