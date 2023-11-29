@@ -226,6 +226,7 @@ sudo ufw status
 ~~~
 
 
+## paso 14 
 
 Habilitar los puertos 1789, 1790 8000, 22, 80, 443
 
@@ -235,26 +236,6 @@ sudo ufw allow 1789,1790,8000,22,80,443/tcp
 sudo ufw status
 ~~~
 
-
-### Automatizar su nodo de mezcla con systemd
-
-Es útil que el nodo de mezcla se inicie automáticamente en el momento del arranque del sistema. Aquí hay un archivo de servicio systemd para hacer eso:
-
-~~~
-
-cd /etc/systemd/system/
-
-sudo nano nym-mixnode.service
-~~~
-
-pega el sigueinte codigo dentro de este archivo 
-
-~~~
-
-~~~
-
-
-en nano guarda con ctrl + o y cierra con ctrl x, y luego habilita el servicio con ↓↓
 
 ~~~
 systemctl enable nym-mixnode.service
