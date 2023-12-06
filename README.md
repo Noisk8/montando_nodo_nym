@@ -338,6 +338,14 @@ ping xx.xxx.xx.xx
 y luego ver el explorador de [guru](https://mixnet.explorers.guru/) 
 
 
+
+este comando para monitorear tu nodo
+
+~~~
+journalctl -f -u nym-mixnode.service
+~~~
+
+
 <details>
 <summary> <h1><b> Cambiar la descripción del nodo </b> </h1></summary>
 
