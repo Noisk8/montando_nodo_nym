@@ -121,7 +121,7 @@ ponemos dentro esta información
 
 ~~~
 [Unit]
-Description=Nym Mixnode (v1.1.34)
+Description=Nym Mixnode (v1.1.36)
 StartLimitInterval=350
 StartLimitBurst=10
 
@@ -138,11 +138,9 @@ WantedBy=multi-user.target
 
 ~~~
 
-
-
 ## paso 7 
 
-Creamos el demonio 
+Reiniciamos los demonios
 
 ~~~
 systemctl daemon-reload
