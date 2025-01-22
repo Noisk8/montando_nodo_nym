@@ -128,7 +128,7 @@ StartLimitBurst=10
 [Service]
 User=root
 LimitNOFILE=65536
-ExecStart=/root/nym-mixnode run --id tuID
+ExecStart=/root/nym-node run --mode mixnode --id noisk8 --deny-init --accept-operator-terms-and-conditions
 KillSignal=SIGINT
 Restart=on-failure
 RestartSec=30
